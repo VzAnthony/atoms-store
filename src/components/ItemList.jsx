@@ -1,26 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "../styles/itemList.css";
+import { products } from "../utils/products";
 import { Item } from "./Item";
+import "../styles/itemList.css";
 
 export const ItemList = () => {
   const productPromise = new Promise((resolve, reject) => {
-    const products = [
-      {
-        id: "1",
-        name: "Litio",
-        price: "50$",
-      },
-      {
-        id: "2",
-        name: "Berilio",
-        price: "70$",
-      },
-      {
-        id: "3",
-        name: "Carbono",
-        price: "100$",
-      },
-    ];
     setTimeout(() => {
       resolve(products);
     }, 2000);
