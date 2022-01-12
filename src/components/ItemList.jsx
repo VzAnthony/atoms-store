@@ -1,49 +1,48 @@
 import React, { useEffect, useState } from "react";
-import "../styles/itemList.css";
 import { Item } from "./Item";
+import { useParams } from "react-router-dom";
+import { products } from "../utils/products";
+import "../styles/itemList.css";
 
 export const ItemList = () => {
-  const productPromise = new Promise((resolve, reject) => {
-    const products = [
-      {
-        id: "1",
-        name: "Litio",
-        price: "50$",
-      },
-      {
-        id: "2",
-        name: "Berilio",
-        price: "70$",
-      },
-      {
-        id: "3",
-        name: "Carbono",
-        price: "100$",
-      },
-    ];
-    setTimeout(() => {
-      resolve(products);
-    }, 2000);
-  });
+  const { category } = useParams();
 
   const [productList, setProductList] = useState({
     loading: true,
     data: [],
   });
 
+  const productPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(products);
+    }, 2000);
+  });
+
   const getItems = async () => {
     const data = await productPromise;
+    const filterData = data.filter((item) => {
+      if (category) {
+        return item.category === category;
+      } else {
+        return true;
+      }
+    });
+
     setProductList({
       loading: false,
-      data,
+      data: filterData,
     });
   };
 
   useEffect(() => {
     getItems();
-  }, []);
-
-  console.log(productList);
+    return () => {
+      setProductList({
+        loading: true,
+        data: [],
+      });
+    };
+  }, [category]);
 
   return (
     <div className="container">
