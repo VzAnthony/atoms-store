@@ -27,8 +27,6 @@ export const ItemList = () => {
     getItems();
   }, []);
 
-  console.log(productList);
-
   return (
     <div className="container">
       <h3 className="title">Lista de Productos</h3>
