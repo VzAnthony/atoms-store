@@ -3,7 +3,7 @@ import logo from "../logo.svg";
 import "../styles/navbar.css";
 
 export const Navbar = () => {
-  const listItem = ["Productos", "Servicios", "Contactanos", "Quienes somos?"];
+  const listItem = ["Atomos", "Tarjeta-de-video", "Carros", "Telefonos"];
   return (
     <div className="navbar">
       <div className="logo">
