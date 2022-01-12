@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: gray;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_text {
+  position: relative;
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+  color: lightblue;
+  bottom: 15px;
+}
+
+.list_container {
+  width: 100%;
+}
+
+.list_option:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: lightblue;
+}
+
+.image {
+  width: 70px;
+  height: 70px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}

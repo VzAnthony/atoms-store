@@ -1,0 +1,47 @@
+.container_detail {
+  padding: 50px 150px;
+}
+
+.item_title {
+  font-size: 36px;
+  text-align: center;
+  color: grey;
+  font-weight: bold;
+}
+
+.image_container {
+  text-align: center;
+}
+
+.product_image {
+  width: 350px;
+  height: 350px;
+}
+
+.description {
+  color: gray;
+  font-weight: bold;
+  text-align: center;
+}
+
+.stock {
+  text-align: center;
+  font-size: 32px;
+  color: grey;
+}
+
+.button_container {
+  text-align: center;
+}
+
+.button_item {
+  background-color: lightblue;
+  height: 45px;
+  width: 300px;
+  border-radius: 35px;
+  font-weight: bold;
+}
+
+.button_item:hover {
+  cursor: pointer;
+}

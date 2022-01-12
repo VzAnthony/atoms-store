@@ -1,0 +1,19 @@
+.container {
+  padding: 50px 100px;
+}
+
+.title {
+  color: gray;
+  margin-bottom: 40px;
+}
+
+.item_list {
+  display: flex;
+}
+
+.loading {
+  text-align: center;
+  font-weight: bold;
+  color: grey;
+  font-size: 32px;
+}
